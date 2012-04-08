@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  'Hello, world'
+  "More here soon. For now, see: <a href='/codeandcoffee.html'>Code and Coffee</a>"
 end
 
 get '/codeandcoffee' do
