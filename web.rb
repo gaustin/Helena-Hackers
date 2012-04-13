@@ -1,11 +1,21 @@
 require 'sinatra'
 
 get '/' do
-  "More here soon. For now, see: <a href='/codeandcoffee.html'>Code and Coffee</a>"
+  erb :index
 end
 
 get '/codeandcoffee' do
-  send_public('codeandcoffee.html')
+  erb :code_and_coffee
+end
+
+helpers do
+  def class_for_tab(path)
+    if path == request.path
+      "active"
+    else
+      ""
+    end
+  end
 end
 
 def send_public(filename)
